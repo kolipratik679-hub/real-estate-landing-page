@@ -3,10 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ready to Move</title>
+    <title>Projects</title>
 
     <link rel="stylesheet" href="bhagat.css">
-    <link rel="stylesheet" href="Ready to Move.css">
     <link rel="stylesheet" href="responsive-navbar-snippet.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     
@@ -104,7 +103,6 @@
 
 
 
-
 <!--===== SIDE BUTTON =====-->
 <div class="fam-container" id="famMenuBox">
 
@@ -147,136 +145,194 @@ famMainBtn.addEventListener("click", ()=>{
 
 
 
+
+
 <!-- MAIN -->
-<h1 class="rtm-page-title">Ready to Move properties</h1>
+<!-- ================= REAL ESTATE CHECKLIST ================= -->
+<div class="recl-wrapper">
 
-<div class="rtm-listing-wrapper">
+  <div class="recl-card">
+    <h2 class="recl-title">📑 Real Estate Document Checklist</h2>
 
-<!-- PROPERTY 1 -->
-<div class="rtm-property-card">
+    <div class="recl-progress">
+      <div class="recl-progress-bar" id="reclProgressBar"></div>
+    </div>
+    <p class="recl-progress-text" id="reclProgressText">0% Completed</p>
 
-  <div class="rtm-image-box">
-    <div class="rtm-image-main">
-      <img src="https://bhagatrealestate.in/wp-content/uploads/2025/09/WhatsApp-Image-2024-06-09-at-12.49.39-584x438.jpeg" alt="">
-      <div class="rtm-image-actions">
-        <a href="#" class="rtm-action-btn rtm-share-btn" data-label="Preview" title="Preview">
-          <i class="fa-solid fa-expand"></i>
-        </a>
-        <a href="#" class="rtm-action-btn rtm-heart-btn" data-label="Favourite" title="Add to Favorites">
-          <i class="fa-regular fa-heart"></i>
-        </a>
-        <a href="#" class="rtm-action-btn rtm-compare-btn" data-label="Add to Compare" title="Compare">
-          <i class="fa-solid fa-arrows-left-right"></i>
-        </a>
+    <!-- SELLING -->
+    <div class="recl-section">
+      <button class="recl-header">🏠 Selling a House</button>
+      <div class="recl-content">
+        <label><input type="checkbox"> Sale Deed / Title Deed</label>
+        <label><input type="checkbox"> Property Tax Receipts</label>
+        <label><input type="checkbox"> Encumbrance Certificate</label>
+        <label><input type="checkbox"> Occupancy Certificate</label>
+        <label><input type="checkbox"> Society NOC</label>
       </div>
     </div>
 
-    <div class="rtm-small-images">
-      <div class="rtm-image-small">
-        <img src="https://bhagatrealestate.in/wp-content/uploads/2025/09/WhatsApp-Image-2024-11-29-at-5.12.01-PM-2-584x438.jpeg" alt="">
-      </div>
-      <div class="rtm-image-small">
-        <img src="https://bhagatrealestate.in/wp-content/uploads/2025/09/WhatsApp-Image-2024-11-29-at-5.12.01-PM-584x438.jpeg" alt="">
+    <!-- BUYING -->
+    <div class="recl-section">
+      <button class="recl-header">🏡 Buying a House</button>
+      <div class="recl-content">
+        <label><input type="checkbox"> Agreement to Sell</label>
+        <label><input type="checkbox"> Home Loan Sanction Letter</label>
+        <label><input type="checkbox"> Sale Deed</label>
+        <label><input type="checkbox"> Possession Letter</label>
+        <label><input type="checkbox"> Allotment Letter</label>
       </div>
     </div>
+
+    <!-- NRI -->
+    <div class="recl-section">
+      <button class="recl-header">🌍 NRI / Foreigner Transactions</button>
+      <div class="recl-content">
+        <label><input type="checkbox"> Passport & Visa Copy</label>
+        <label><input type="checkbox"> PAN Card</label>
+        <label><input type="checkbox"> Proof of Address Abroad</label>
+        <label><input type="checkbox"> Power of Attorney</label>
+        <label><input type="checkbox"> RBI Approval</label>
+      </div>
+    </div>
+
   </div>
-
-  <div class="rtm-details">
-    <div>
-      <div class="rtm-badges">
-        <span class="rtm-badge"><a href="for-sale.html">FOR SALE</a></span>
-        <span class="rtm-badge"><a href="ready-to-move.html">READY TO MOVE</a></span>
-      </div>
-
-      <h2><a href="lt-seawoods.html">L&T Seawoods Residence</a></h2>
-      <div class="rtm-location"><i class="fa-solid fa-location-dot"></i> Seawoods</div>
-
-      <div class="rtm-price">₹39,000,000</div>
-
-      <div class="rtm-features">
-        <span>🛏 3</span>
-      </div>
-
-      <div class="rtm-type">RESIDENTIAL</div>
-    </div>
-
-    <div class="rtm-agent">
-      <div class="rtm-agent-info">
-        <div class="rtm-agent-img">
-          <img src="man icon.png" alt="">
-        </div>
-        <span>Amarnath Bhagat</span>
-      </div>
-      <a href="email-btn.html" class="rtm-email-btn">✉ Email</a>
-    </div>
-  </div>
-
 </div>
 
-<!-- PROPERTY 2 -->
-<div class="rtm-property-card">
+<!-- ================= CSS ================= -->
+<style>
+.recl-wrapper{
+  background:#f5f5f5;
+  padding:10px 0;
+}
 
-  <div class="rtm-image-box">
-    <div class="rtm-image-main">
-      <img src="https://bhagatrealestate.in/wp-content/uploads/2025/09/Project-Photo-32-Moreshwar-19-East-Navi-Mumbai-5213591_1500_2000-1-1536x1152.jpg" alt="">
-      <div class="rtm-image-actions">
-        <a href="#" class="rtm-action-btn rtm-share-btn" data-label="Preview" title="Preview">
-          <i class="fa-solid fa-expand"></i>
-        </a>
-        <a href="#" class="rtm-action-btn rtm-heart-btn" data-label="Favourite" title="Add to Favorites">
-          <i class="fa-regular fa-heart"></i>
-        </a>
-        <a href="#" class="rtm-action-btn rtm-compare-btn" data-label="Add to Compare" title="Compare">
-          <i class="fa-solid fa-arrows-left-right"></i>
-        </a>
-      </div>
-    </div>
+.recl-card{
+  max-width:600px;
+  margin:auto;
+  background:#fff;
+  border-radius:18px;
+  padding:18px;
+  box-shadow:0 10px 30px rgba(0,0,0,0.08);
+  font-family:Arial, sans-serif;
+  line-height: 2;
+}
 
-    <div class="rtm-small-images">
-      <div class="rtm-image-small">
-        <img src="https://bhagatrealestate.in/wp-content/uploads/2025/09/Floor-Plan-20-Moreshwar-19-East-Navi-Mumbai-5213591_523_541-541x438.jpg" alt="">
-      </div>
-      <div class="rtm-image-small">
-        <img src="https://bhagatrealestate.in/wp-content/uploads/2025/09/Floor-Plan-23-Moreshwar-19-East-Navi-Mumbai-5213591_544_541-541x438.jpg" alt="">
-      </div>
-    </div>
-  </div>
+.recl-card:hover{
+    transform: scale(1.01);
+    transition: .3s;
+    box-shadow: 1px 1px 15px #4f8fe7,
+    inset 1px 1px 5px rgb(57, 55, 55);
+}
 
-  <div class="rtm-details">
-    <div>
-      <div class="rtm-badges">
-        <span class="rtm-badge"><a href="for-sale.html">FOR SALE</a></span>
-        <span class="rtm-badge"><a href="ready-to-move.html">READY TO MOVE</a></span>
-      </div>
+.recl-title{
+  text-align:center;
+  font-size:22px;
+  margin-bottom:20px;
+}
 
-      <h2><a href="19-east-moreshwar.html">19 East Moreshwar</a></h2>
-      <div class="rtm-location"><i class="fa-solid fa-location-dot"></i> Nerul east</div>
+.recl-progress{
+  height:10px;
+  background:#eee;
+  border-radius:10px;
+  overflow:hidden;
+}
 
-      <div class="rtm-price">₹32,500,000</div>
+.recl-progress-bar{
+  height:100%;
+  width:0%;
+  background:#4a90e2;
+  transition:0.4s ease;
+}
 
-      <div class="rtm-features">
-        <span>🛏 3</span>
-        <span>🚿 3</span>
-      </div>
+.recl-progress-text{
+  text-align:center;
+  font-size:14px;
+  margin:8px 0 18px;
+  color:#555;
+}
 
-      <div class="rtm-type">RESIDENTIAL</div>
-    </div>
+.recl-section{
+  margin-bottom:14px;
+}
 
-    <div class="rtm-agent">
-      <div class="rtm-agent-info">
-        <div class="rtm-agent-img">
-          <img src="man icon.png" alt="">
-        </div>
-        <span>Amarnath Bhagat</span>
-      </div>
-      <a href="email-btn.html" class="rtm-email-btn">✉ Email</a>
-    </div>
-  </div>
+.recl-header{
+  width:100%;
+  padding:18px;
+  border:none;
+  background:#f7faff;
+  border-radius:12px;
+  font-size:15px;
+  font-weight: 700;
+  text-align:left;
+  cursor:pointer;
+  transition:0.3s;
+}
 
-</div>
+.recl-header:hover{
+  background:#eaf2ff;
+  transform:scale(1.01);
+}
 
-</div>
-<!-- END -->
+.recl-content{
+  max-height:0;
+  overflow:hidden;
+  transition:max-height 0.4s ease;
+  padding-left:10px;
+}
+
+.recl-content label{
+  display:block;
+  padding:8px 0;
+  font-size:14px;
+  cursor:pointer;
+}
+
+.recl-content label:hover{
+    transform: translateX(5px);
+    transition: .3s;
+}
+
+.recl-content input{
+  margin-right:8px;
+}
+</style>
+
+<!-- ================= JS ================= -->
+<script>
+const headers = document.querySelectorAll('.recl-header');
+const checkboxes = document.querySelectorAll('.recl-content input');
+const progressBar = document.getElementById('reclProgressBar');
+const progressText = document.getElementById('reclProgressText');
+
+headers.forEach(header=>{
+  header.addEventListener('click',()=>{
+    const content = header.nextElementSibling;
+    if(content.style.maxHeight){
+      content.style.maxHeight = null;
+    }else{
+      content.style.maxHeight = content.scrollHeight + "px";
+    }
+  });
+});
+
+function updateProgress(){
+  const total = checkboxes.length;
+  const checked = document.querySelectorAll('.recl-content input:checked').length;
+  const percent = Math.round((checked / total) * 100);
+  progressBar.style.width = percent + "%";
+  progressText.innerText = percent + "% Completed";
+}
+
+checkboxes.forEach(cb=>{
+  cb.addEventListener('change', updateProgress);
+});
+</script>
+<!-- ========================================================= -->
+<!-- MAIN END -->
+
+
+
+
+
 
 
 

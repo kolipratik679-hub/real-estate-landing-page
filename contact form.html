@@ -1,0 +1,202 @@
+      <div class="map-info">
+        <div>📍 Shop no 3, Future Gold CHS, Sector 44,<br>Seawoods West - 400706</div>
+        <div>📞 8879535104 / 8369139899</div>
+      </div>
+
+      <div class="social">
+        <a href="#">F</a>
+        <a href="#">T</a>
+        <a href="#">I</a>
+        <a href="#">L</a>
+      </div>
+    </div>
+        
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>form</title>
+</head>
+<body>
+    <style>
+.contact-section{
+  background:#e9f6fa;
+  padding:80px 0;
+  font-family: "Segoe UI", sans-serif;
+}
+.contact-wrapper{
+  max-width:1200px;
+  margin:auto;
+  display:grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap:50px;
+}
+.contact-title h2{
+  font-size:42px;
+  margin-bottom:10px;
+  color:#222;
+}
+.contact-title p{
+  font-size:18px;
+  color:#555;
+  margin-bottom:30px;
+}
+
+/* FORM */
+.contact-form input,
+.contact-form select,
+.contact-form textarea{
+  width:100%;
+  padding:14px 16px;
+  border-radius:6px;
+  border:1px solid #ddd;
+  font-size:16px;
+}
+.contact-form textarea{height:120px; resize:none;}
+.form-row{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:15px;
+  margin-bottom:15px;
+}
+.contact-form .full{
+  margin-bottom:15px;
+}
+.checkbox{
+  display:flex;
+  gap:10px;
+  font-size:14px;
+  color:#444;
+  margin:15px 0 25px;
+}
+.submit-btn{
+  background:#004f7c;
+  color:#fff;
+  border:none;
+  width:100%;
+  padding:16px;
+  font-size:15px;
+  letter-spacing:2px;
+  cursor:pointer;
+  border-radius:4px;
+}
+
+/* MAP */
+.map-box{
+  background:#fff;
+  padding:10px;
+  border-radius:8px;
+}
+.map-box iframe{
+  width:100%;
+  height:360px;
+  border:0;
+  border-radius:6px;
+}
+.map-info{
+  margin-top:20px;
+  font-size:16px;
+  color:#004f7c;
+}
+.map-info div{
+  margin-bottom:10px;
+}
+.social{
+  margin-top:20px;
+}
+.social a{
+  display:inline-flex;
+  width:36px;
+  height:36px;
+  border:1px solid #004f7c;
+  border-radius:50%;
+  align-items:center;
+  justify-content:center;
+  margin-right:8px;
+  color:#004f7c;
+  text-decoration:none;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+  .contact-wrapper{
+    grid-template-columns:1fr;
+  }
+}
+</style>
+
+<section class="contact-section">
+  <div class="contact-wrapper">
+
+    <!-- LEFT -->
+    <div>
+      <div class="contact-title">
+        <h2>Get in touch with us</h2>
+        <p>Find the best deal on homes in your area. Let us help you.</p>
+      </div>
+
+      <form class="contact-form">
+        <div class="full">
+          <select>
+            <option>Select</option>
+            <option>Buy Property</option>
+            <option>Sell Property</option>
+            <option>NRI Assistance</option>
+          </select>
+        </div>
+
+        <div class="full">
+          <input type="text" placeholder="Name">
+        </div>
+
+        <div class="form-row">
+          <input type="email" placeholder="Email">
+          <input type="tel" placeholder="Phone">
+        </div>
+
+        <div class="form-row">
+          <input type="text" placeholder="City">
+          <input type="text" placeholder="Zip Code">
+        </div>
+
+        <div class="full">
+          <textarea placeholder="Message"></textarea>
+        </div>
+
+        <div class="checkbox">
+          <input type="checkbox">
+          <span>I consent to having this website store my submitted information</span>
+        </div>
+
+        <button class="submit-btn">SUBMIT</button>
+      </form>
+    </div>
+
+    <!-- RIGHT -->
+    <div class="map-box">
+      <iframe 
+        src="https://www.google.com/maps?q=Shop%20no%203,%20Future%20Gold%20CHS,%20Sector%2044,%20Seawoods%20West%20400706&output=embed"
+        allowfullscreen
+        loading="lazy">
+      </iframe>
+
+      <div class="map-info">
+        <div>📍 Shop no 3, Future Gold CHS, Sector 44,<br>Seawoods West - 400706</div>
+        <div>📞 8879535104 / 8369139899</div>
+      </div>
+
+      <div class="social">
+        <a href="#">F</a>
+        <a href="#">T</a>
+        <a href="#">I</a>
+        <a href="#">L</a>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+</body>
+</html>
