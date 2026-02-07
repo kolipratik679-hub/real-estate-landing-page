@@ -83,21 +83,182 @@
     <div class="header-right">
       <div class="phone">
         <i class="fa-solid fa-phone"></i>
-        <span>+91 8879535104</span>
+        <span class="contact-number"><a href="tel:8879535104">+91 8879535104</a></span>
       </div>
 
-      <div class="user-icon">
-        <i class="fa-regular fa-user"></i>
+
+      <!-- USER ICON -->
+      <div class="user-icon-link">
+          <i class="fa-regular fa-user" onclick="openAuthLoginModal()" style="cursor: pointer;"></i>
       </div>
 
-      <a href="btn-listing.html" class="btn-listing">Create a Listing</a>
+      <a href="create-listing.html" class="btn-listing">Create a Listing</a>
     </div>
 
   </div>
 </header>
 
-<script src="responsive-navbar-snippet.js"></script>
+
+
+
+
+
+
+
+
+
+<!-- Modal Overlay Container -->
+<div class="auth-modal-overlay" id="authModalOverlay">
+    <!-- Modal Box -->
+    <div class="auth-modal-box">
+        <!-- Close Button -->
+        <button class="auth-close-btn" id="authCloseBtn">×</button>
+        
+        <!-- Tab Header - Login/Register Tabs -->
+        <div class="auth-tab-header">
+            <button class="auth-tab-btn auth-active-tab" id="authLoginTabBtn">Login</button>
+            <button class="auth-tab-btn" id="authRegisterTabBtn">Register</button>
+        </div>
+        
+        <!-- Form Container -->
+        <div class="auth-form-container">
+            <!-- Login Form -->
+            <form class="auth-form auth-active-form" id="authLoginForm">
+                <!-- Username/Email Input -->
+                <div class="auth-input-group">
+                    <span class="auth-input-icon">👤</span>
+                    <input 
+                        type="text" 
+                        class="auth-input-field" 
+                        placeholder="Username or Email"
+                        name="login-username"
+                        required
+                    >
+                </div>
+                
+                <!-- Password Input -->
+                <div class="auth-input-group">
+                    <span class="auth-input-icon">🔒</span>
+                    <input 
+                        type="password" 
+                        class="auth-input-field" 
+                        placeholder="Password"
+                        name="login-password"
+                        required
+                    >
+                </div>
+                
+                <!-- Remember Me & Forgot Password Row -->
+                <div class="auth-remember-row">
+                    <label class="auth-remember-label">
+                        <input type="checkbox" class="auth-remember-checkbox" name="remember-me">
+                        Remember me
+                    </label>
+                    <a href="#" class="auth-forgot-link" id="authForgotLink">Lost your password?</a>
+                </div>
+                
+                <!-- Login Button -->
+                <button type="submit" class="auth-submit-btn">Login</button>
+            </form>
+            
+            <!-- Register Form -->
+            <form class="auth-form" id="authRegisterForm">
+                <!-- Username Input -->
+                <div class="auth-input-group">
+                    <span class="auth-input-icon">👤</span>
+                    <input 
+                        type="text" 
+                        class="auth-input-field" 
+                        placeholder="Username"
+                        name="register-username"
+                        required
+                    >
+                </div>
+                
+                <!-- Email Input -->
+                <div class="auth-input-group">
+                    <span class="auth-input-icon">✉️</span>
+                    <input 
+                        type="email" 
+                        class="auth-input-field" 
+                        placeholder="Email"
+                        name="register-email"
+                        required
+                    >
+                </div>
+                
+                <!-- Phone Input -->
+                <div class="auth-input-group">
+                    <span class="auth-input-icon">📞</span>
+                    <input 
+                        type="tel" 
+                        class="auth-input-field" 
+                        placeholder="Phone"
+                        name="register-phone"
+                        required
+                    >
+                </div>
+                
+                <!-- Account Type Dropdown -->
+                <div class="auth-input-group">
+                    <select class="auth-select-field" name="account-type" required>
+                        <option value="">Select your account type</option>
+                        <option value="Agent">Agent</option>
+                        <option value="Agency">Agency</option>
+                        <option value="Owner">Owner</option>
+                        <option value="Buyer">Buyer</option>
+                        <option value="Seller">Seller</option>
+                    </select>
+                </div>
+                
+                <!-- Terms and Conditions -->
+                <label class="auth-terms-label">
+                    <input type="checkbox" class="auth-terms-checkbox" name="terms" required>
+                    <span>I agree with your <a href="bhgat.html" class="auth-terms-link" target="_blank">Terms & Conditions</a></span>
+                </label>
+                
+                <!-- Register Button -->
+                <button type="submit" class="auth-submit-btn">Register</button>
+            </form>
+        </div>
+    </div>
+</div>
+
+<!-- Forgot Password Modal -->
+<div class="auth-modal-overlay" id="authForgotModalOverlay">
+    <div class="auth-modal-box" style="max-width: 500px;">
+        <!-- Close Button -->
+        <button class="auth-close-btn auth-forgot-close-btn" id="authForgotCloseBtn">×</button>
+        
+        <!-- Forgot Password Content -->
+        <div class="auth-form-container">
+            <h2 class="auth-forgot-title">Forgot Password</h2>
+            <p class="auth-forgot-description">
+                Please enter your username or email address. You will receive a link to create a new password via email.
+            </p>
+            
+            <form id="authForgotPasswordForm">
+                <!-- Email/Username Input -->
+                <div class="auth-input-group">
+                    <input 
+                        type="text" 
+                        class="auth-input-field" 
+                        placeholder="Enter your username or email address"
+                        name="forgot-email"
+                        required
+                        style="padding-left: 15px;"
+                    >
+                </div>
+                
+                <!-- Submit Button -->
+                <button type="submit" class="auth-submit-btn">Submit</button>
+            </form>
+        </div>
+    </div>
+</div>
+
 <!-- ===== HEADER CLOSE ===== -->
+
 
 
 
@@ -154,17 +315,299 @@ famMainBtn.addEventListener("click", ()=>{
       <a href="Award And Certificate.html">Awards and Certificates</a>
       <a href="Commercial.html">Commercial</a>
       <a href="compare.html">Compare</a>
-      <a href="contact-us.html">Contact Us</a>
-      <a href="documents-checklist.html">Documents Checklist</a>
-      <a href="emi-calculator.html">Emi Calculator</a>
-      <a href="frequently-asked-questions.html">Frequently Asked Questions</a>
-      <a href="nri-assitance.html">NRI Assitance</a>
+      <a href="Contact Us.html">Contact Us</a>
+      <a href="Documents Checklist.html">Documents Checklist</a>
+      <a href="Emi Calculator.html">Emi Calculator</a>
+      <a href="Frequently Asked Questions.html">Frequently Asked Questions</a>
+      <a href="NRI Assistance.html">NRI Assitance</a>
       <a href="Properties.html">Properties</a>
-      <a href="ready-to-move.html">Ready to Move</a>
+      <a href="Ready to Move.html">Ready to Move</a>
       <a href="Under Construction.html">Under Construction</a>
-      <a href="up-coming.html">Up Coming</a>
+      <a href="Up Coming.html">Up Coming</a>
   </div>
 </footer>
+
+
+ <!-- USER ICON -->
+<script>
+  // USER ICON
+// ============================================
+// LOGIN/REGISTER MODAL JAVASCRIPT
+// Auth Modal System - All functionality
+// ============================================
+
+// Get all modal elements
+const authModalOverlay = document.getElementById('authModalOverlay');
+const authForgotModalOverlay = document.getElementById('authForgotModalOverlay');
+const authCloseBtn = document.getElementById('authCloseBtn');
+const authForgotCloseBtn = document.getElementById('authForgotCloseBtn');
+const authLoginTabBtn = document.getElementById('authLoginTabBtn');
+const authRegisterTabBtn = document.getElementById('authRegisterTabBtn');
+const authLoginForm = document.getElementById('authLoginForm');
+const authRegisterForm = document.getElementById('authRegisterForm');
+const authForgotLink = document.getElementById('authForgotLink');
+const authForgotPasswordForm = document.getElementById('authForgotPasswordForm');
+
+// ========================================
+// OPEN MODAL FUNCTIONS
+// ========================================
+
+/**
+ * Open Login Modal
+ * Call this function from your user icon: onclick="openAuthLoginModal()"
+ */
+function openAuthLoginModal() {
+    authModalOverlay.classList.add('auth-active');
+    // Switch to login tab
+    authLoginTabBtn.classList.add('auth-active-tab');
+    authRegisterTabBtn.classList.remove('auth-active-tab');
+    authLoginForm.classList.add('auth-active-form');
+    authRegisterForm.classList.remove('auth-active-form');
+    // Prevent body scroll when modal is open
+    document.body.style.overflow = 'hidden';
+}
+
+/**
+ * Open Register Modal
+ * Call this function if needed: onclick="openAuthRegisterModal()"
+ */
+function openAuthRegisterModal() {
+    authModalOverlay.classList.add('auth-active');
+    // Switch to register tab
+    authRegisterTabBtn.classList.add('auth-active-tab');
+    authLoginTabBtn.classList.remove('auth-active-tab');
+    authRegisterForm.classList.add('auth-active-form');
+    authLoginForm.classList.remove('auth-active-form');
+    // Prevent body scroll when modal is open
+    document.body.style.overflow = 'hidden';
+}
+
+// ========================================
+// CLOSE MODAL FUNCTIONS
+// ========================================
+
+/**
+ * Close Auth Modal (Login/Register)
+ */
+function closeAuthModal() {
+    authModalOverlay.classList.remove('auth-active');
+    // Restore body scroll
+    document.body.style.overflow = 'auto';
+}
+
+/**
+ * Close Forgot Password Modal
+ */
+function closeAuthForgotModal() {
+    authForgotModalOverlay.classList.remove('auth-active');
+    document.body.style.overflow = 'auto';
+}
+
+// ========================================
+// EVENT LISTENERS - Close Buttons
+// ========================================
+
+// Close button for main auth modal
+authCloseBtn.addEventListener('click', closeAuthModal);
+
+// Close button for forgot password modal
+authForgotCloseBtn.addEventListener('click', closeAuthForgotModal);
+
+// Close modal when clicking outside the modal box
+authModalOverlay.addEventListener('click', function(e) {
+    if (e.target === authModalOverlay) {
+        closeAuthModal();
+    }
+});
+
+authForgotModalOverlay.addEventListener('click', function(e) {
+    if (e.target === authForgotModalOverlay) {
+        closeAuthForgotModal();
+    }
+});
+
+// Close modal with Escape key
+document.addEventListener('keydown', function(e) {
+    if (e.key === 'Escape') {
+        closeAuthModal();
+        closeAuthForgotModal();
+    }
+});
+
+// ========================================
+// TAB SWITCHING FUNCTIONALITY
+// ========================================
+
+// Switch to Login Tab
+authLoginTabBtn.addEventListener('click', function() {
+    // Update tab buttons
+    authLoginTabBtn.classList.add('auth-active-tab');
+    authRegisterTabBtn.classList.remove('auth-active-tab');
+    
+    // Update forms
+    authLoginForm.classList.add('auth-active-form');
+    authRegisterForm.classList.remove('auth-active-form');
+});
+
+// Switch to Register Tab
+authRegisterTabBtn.addEventListener('click', function() {
+    // Update tab buttons
+    authRegisterTabBtn.classList.add('auth-active-tab');
+    authLoginTabBtn.classList.remove('auth-active-tab');
+    
+    // Update forms
+    authRegisterForm.classList.add('auth-active-form');
+    authLoginForm.classList.remove('auth-active-form');
+});
+
+// ========================================
+// FORGOT PASSWORD LINK
+// ========================================
+
+authForgotLink.addEventListener('click', function(e) {
+    e.preventDefault();
+    // Close main auth modal
+    closeAuthModal();
+    // Open forgot password modal
+    authForgotModalOverlay.classList.add('auth-active');
+    document.body.style.overflow = 'hidden';
+});
+
+// ========================================
+// FORM SUBMISSIONS
+// Handle form submissions (customize these as needed)
+// ========================================
+
+// Login Form Submission
+authLoginForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Get form data
+    const formData = new FormData(authLoginForm);
+    const username = formData.get('login-username');
+    const password = formData.get('login-password');
+    const rememberMe = formData.get('remember-me');
+    
+    console.log('Login Form Submitted:');
+    console.log('Username:', username);
+    console.log('Password:', password);
+    console.log('Remember Me:', rememberMe ? 'Yes' : 'No');
+    
+    // TODO: Add your login API call here
+    // Example:
+    // fetch('/api/login', {
+    //     method: 'POST',
+    //     headers: { 'Content-Type': 'application/json' },
+    //     body: JSON.stringify({ username, password, rememberMe })
+    // })
+    // .then(response => response.json())
+    // .then(data => {
+    //     if (data.success) {
+    //         closeAuthModal();
+    //         window.location.href = '/dashboard';
+    //     } else {
+    //         alert('Invalid credentials');
+    //     }
+    // })
+    // .catch(error => {
+    //     console.error('Login error:', error);
+    //     alert('An error occurred during login');
+    // });
+    
+    alert('Login form submitted! Check console for details.');
+    // Remove this alert and uncomment the API call above for production
+});
+
+// Register Form Submission
+authRegisterForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Get form data
+    const formData = new FormData(authRegisterForm);
+    const username = formData.get('register-username');
+    const email = formData.get('register-email');
+    const phone = formData.get('register-phone');
+    const accountType = formData.get('account-type');
+    const termsAccepted = formData.get('terms');
+    
+    console.log('Register Form Submitted:');
+    console.log('Username:', username);
+    console.log('Email:', email);
+    console.log('Phone:', phone);
+    console.log('Account Type:', accountType);
+    console.log('Terms Accepted:', termsAccepted ? 'Yes' : 'No');
+    
+    // TODO: Add your registration API call here
+    // Example:
+    // fetch('/api/register', {
+    //     method: 'POST',
+    //     headers: { 'Content-Type': 'application/json' },
+    //     body: JSON.stringify({ 
+    //         username, 
+    //         email, 
+    //         phone, 
+    //         accountType, 
+    //         termsAccepted 
+    //     })
+    // })
+    // .then(response => response.json())
+    // .then(data => {
+    //     if (data.success) {
+    //         closeAuthModal();
+    //         alert('Registration successful! Please check your email.');
+    //     } else {
+    //         alert(data.message || 'Registration failed');
+    //     }
+    // })
+    // .catch(error => {
+    //     console.error('Registration error:', error);
+    //     alert('An error occurred during registration');
+    // });
+    
+    alert('Registration form submitted! Check console for details.');
+    // Remove this alert and uncomment the API call above for production
+});
+
+// Forgot Password Form Submission
+authForgotPasswordForm.addEventListener('submit', function(e) {
+    e.preventDefault();
+    
+    // Get form data
+    const formData = new FormData(authForgotPasswordForm);
+    const email = formData.get('forgot-email');
+    
+    console.log('Forgot Password Form Submitted:');
+    console.log('Email:', email);
+    
+    // TODO: Add your forgot password API call here
+    // Example:
+    // fetch('/api/forgot-password', {
+    //     method: 'POST',
+    //     headers: { 'Content-Type': 'application/json' },
+    //     body: JSON.stringify({ email })
+    // })
+    // .then(response => response.json())
+    // .then(data => {
+    //     if (data.success) {
+    //         alert('Password reset link sent to: ' + email);
+    //         closeAuthForgotModal();
+    //     } else {
+    //         alert(data.message || 'Email not found');
+    //     }
+    // })
+    // .catch(error => {
+    //     console.error('Forgot password error:', error);
+    //     alert('An error occurred');
+    // });
+    
+    alert('Password reset link will be sent to: ' + email);
+    closeAuthForgotModal();
+    // Remove this alert and uncomment the API call above for production
+});
+
+</script>
+
+ <script src="responsive-navbar-snippet.js"></script>   
 
 
 

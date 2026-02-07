@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Award And Certificate</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Compare</title>
 
-  <link rel="stylesheet" href="Award And Certificate.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="responsive-navbar-snippet.css" />
-
+    <link rel="stylesheet" href="bhagat.css">
+    <link rel="stylesheet" href="responsive-navbar-snippet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="compare.css">
+    
 </head>
 <body>
-  
+
 <!-- ===== HEADER ===== -->
 <header class="header">
   <div class="header-container">
@@ -263,19 +264,85 @@
 
 
 
-  <div class="container">
-    <h1>Award And Certificate</h1>
+<!--===== SIDE BUTTON =====-->
+<div class="fam-container" id="famMenuBox">
 
-    <div class="image-box">
-      <img src="IMG-20250825-WA0005-584x438.jpg" alt="Award Image" />
-      <img src="IMG-20250825-WA0006-584x438.jpg" alt="">
-      <img src="IMG-20250825-WA0007-584x438.jpg" alt="">
-      <img src="IMG-20250825-WA0008.jpg" alt="">
-      <img src="IMG-20250825-WA0009-584x438.jpg" alt="">
-      <img src="IMG-20250825-WA0010-584x438.jpg" alt="">
-      <img src="WhatsApp-Image-2025-08-25-at-21.56.30_d39a82b6-1152x1536.jpg" alt="">
-    </div>
+  <!-- 📞 CALL -->
+  <a href="tel:7304810459" class="fam-menu">
+    <img class="fam-icon" src="phone png.png" alt="Call">
+  </a>
+
+  <!-- 💬 WHATSAPP -->
+  <a href="https://wa.me/917304810459" target="_blank" class="fam-menu">
+    <img class="fam-icon" src="whatsapp png.png" alt="WhatsApp">
+  </a>
+
+  <!-- 🔄 MAIN BUTTON -->
+  <div class="fam-main-wrapper" id="famMainBtn">
+
+    <!-- First Image -->
+    <img class="fam-icon fam-main" src="menu png.png">
+
+    <!-- Second Image -->
+    <img class="fam-icon fam-swap" src="cancel png.png">
+
   </div>
+
+</div>
+
+<script>
+const famBox = document.getElementById("famMenuBox");
+const famMainBtn = document.getElementById("famMainBtn");
+
+famMainBtn.addEventListener("click", ()=>{
+  famBox.classList.toggle("fam-active");
+});
+</script>
+
+
+
+
+
+
+
+
+
+<!-- MAIN -->
+<div class="page-wrapper">
+
+    <!-- Breadcrumb -->
+    <div class="breadcrumb">
+        <a href="bhgat.html"><img src="home icon.png" alt="" width="13px"> Home </a> <span> > </span> <span>Compare</span>
+    </div>
+
+    <h1 class="page-title">Compare</h1>
+
+    <!-- Compare Container -->
+    <div class="compare-container">
+
+        <div class="compare-row">Title</div>
+        <div class="compare-row">Price</div>
+        <div class="compare-row">Type</div>
+        <div class="compare-row">Address</div>
+        <div class="compare-row">City</div>
+        <div class="compare-row">State/county</div>
+        <div class="compare-row">Zip/Postal Code</div>
+        <div class="compare-row">Country</div>
+        <div class="compare-row">Property Size</div>
+        <div class="compare-row">Property ID</div>
+
+    </div>
+
+</div>
+<!-- MAIN END -->
+
+
+
+
+
+
+
+
 
 
 <!--===== FOOTER =====-->
@@ -586,7 +653,5 @@ authForgotPasswordForm.addEventListener('submit', function(e) {
 
 
 
-
-  
 </body>
-</html>             
+</html>

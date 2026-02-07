@@ -1,17 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Award And Certificate</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Add Property</title>
 
-  <link rel="stylesheet" href="Award And Certificate.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-  <link rel="stylesheet" href="responsive-navbar-snippet.css" />
+    <link rel="stylesheet" href="bhagat.css">
+    <link rel="stylesheet" href="responsive-navbar-snippet.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+    <link rel="stylesheet" href="create-listing.css">
 
 </head>
 <body>
-  
+
 <!-- ===== HEADER ===== -->
 <header class="header">
   <div class="header-container">
@@ -263,19 +264,219 @@
 
 
 
-  <div class="container">
-    <h1>Award And Certificate</h1>
+<!--===== SIDE BUTTON =====-->
+<div class="fam-container" id="famMenuBox">
 
-    <div class="image-box">
-      <img src="IMG-20250825-WA0005-584x438.jpg" alt="Award Image" />
-      <img src="IMG-20250825-WA0006-584x438.jpg" alt="">
-      <img src="IMG-20250825-WA0007-584x438.jpg" alt="">
-      <img src="IMG-20250825-WA0008.jpg" alt="">
-      <img src="IMG-20250825-WA0009-584x438.jpg" alt="">
-      <img src="IMG-20250825-WA0010-584x438.jpg" alt="">
-      <img src="WhatsApp-Image-2025-08-25-at-21.56.30_d39a82b6-1152x1536.jpg" alt="">
-    </div>
+  <!-- 📞 CALL -->
+  <a href="tel:7304810459" class="fam-menu">
+    <img class="fam-icon" src="phone png.png" alt="Call">
+  </a>
+
+  <!-- 💬 WHATSAPP -->
+  <a href="https://wa.me/917304810459" target="_blank" class="fam-menu">
+    <img class="fam-icon" src="whatsapp png.png" alt="WhatsApp">
+  </a>
+
+  <!-- 🔄 MAIN BUTTON -->
+  <div class="fam-main-wrapper" id="famMainBtn">
+
+    <!-- First Image -->
+    <img class="fam-icon fam-main" src="menu png.png">
+
+    <!-- Second Image -->
+    <img class="fam-icon fam-swap" src="cancel png.png">
+
   </div>
+
+</div>
+
+<script>
+const famBox = document.getElementById("famMenuBox");
+const famMainBtn = document.getElementById("famMainBtn");
+
+famMainBtn.addEventListener("click", ()=>{
+  famBox.classList.toggle("fam-active");
+});
+</script>
+
+
+
+
+
+
+
+
+
+<!-- MAIN -->
+    
+    <!-- Login Required Message Box -->
+    <div class="auth-login-required-box">
+        <div class="auth-login-message-container">
+            <p class="auth-login-message-text">
+                <strong>Login Required:</strong> Please login to submit property! 
+                <a href="#" class="auth-login-trigger-link" onclick="openAuthLoginModal()">Login</a> - 
+                <a href="#" class="auth-login-trigger-link" onclick="openAuthRegisterModal()">Register</a>
+            </p>
+        </div>
+    </div>
+
+    
+    <!-- Modal Overlay Container -->
+    <div class="auth-modal-overlay" id="authModalOverlay">
+        <!-- Modal Box -->
+        <div class="auth-modal-box">
+            <!-- Close Button -->
+            <button class="auth-close-btn" id="authCloseBtn">×</button>
+            
+            <!-- Tab Header - Login/Register Tabs -->
+            <div class="auth-tab-header">
+                <button class="auth-tab-btn auth-active-tab" id="authLoginTabBtn">Login</button>
+                <button class="auth-tab-btn" id="authRegisterTabBtn">Register</button>
+            </div>
+            
+            <!-- Form Container -->
+            <div class="auth-form-container">
+                <!-- Login Form -->
+                <form class="auth-form auth-active-form" id="authLoginForm">
+                    <!-- Username/Email Input -->
+                    <div class="auth-input-group">
+                        <span class="auth-input-icon">👤</span>
+                        <input 
+                            type="text" 
+                            class="auth-input-field" 
+                            placeholder="Username or Email"
+                            name="login-username"
+                            required
+                        >
+                    </div>
+                    
+                    <!-- Password Input -->
+                    <div class="auth-input-group">
+                        <span class="auth-input-icon">🔒</span>
+                        <input 
+                            type="password" 
+                            class="auth-input-field" 
+                            placeholder="Password"
+                            name="login-password"
+                            required
+                        >
+                    </div>
+                    
+                    <!-- Remember Me & Forgot Password Row -->
+                    <div class="auth-remember-row">
+                        <label class="auth-remember-label">
+                            <input type="checkbox" class="auth-remember-checkbox" name="remember-me">
+                            Remember me
+                        </label>
+                        <a href="#" class="auth-forgot-link" id="authForgotLink">Lost your password?</a>
+                    </div>
+                    
+                    <!-- Login Button -->
+                    <button type="submit" class="auth-submit-btn">Login</button>
+                </form>
+                
+                <!-- Register Form -->
+                <form class="auth-form" id="authRegisterForm">
+                    <!-- Username Input -->
+                    <div class="auth-input-group">
+                        <span class="auth-input-icon">👤</span>
+                        <input 
+                            type="text" 
+                            class="auth-input-field" 
+                            placeholder="Username"
+                            name="register-username"
+                            required
+                        >
+                    </div>
+                    
+                    <!-- Email Input -->
+                    <div class="auth-input-group">
+                        <span class="auth-input-icon">✉️</span>
+                        <input 
+                            type="email" 
+                            class="auth-input-field" 
+                            placeholder="Email"
+                            name="register-email"
+                            required
+                        >
+                    </div>
+                    
+                    <!-- Phone Input -->
+                    <div class="auth-input-group">
+                        <span class="auth-input-icon">📞</span>
+                        <input 
+                            type="tel" 
+                            class="auth-input-field" 
+                            placeholder="Phone"
+                            name="register-phone"
+                            required
+                        >
+                    </div>
+                    
+                    <!-- Account Type Dropdown -->
+                    <div class="auth-input-group">
+                        <select class="auth-select-field" name="account-type" required>
+                            <option value="">Select your account type</option>
+                            <option value="Agent">Agent</option>
+                            <option value="Agency">Agency</option>
+                            <option value="Owner">Owner</option>
+                            <option value="Buyer">Buyer</option>
+                            <option value="Seller">Seller</option>
+                        </select>
+                    </div>
+                    
+                    <!-- Terms and Conditions -->
+                    <label class="auth-terms-label">
+                        <input type="checkbox" class="auth-terms-checkbox" name="terms" required>
+                        <span>I agree with your <a href="#" class="auth-terms-link">Terms & Conditions</a></span>
+                    </label>
+                    
+                    <!-- Register Button -->
+                    <button type="submit" class="auth-submit-btn">Register</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- Forgot Password Modal -->
+    <div class="auth-modal-overlay" id="authForgotModalOverlay">
+        <div class="auth-modal-box" style="max-width: 500px;">
+            <!-- Close Button -->
+            <button class="auth-close-btn" id="authForgotCloseBtn" style="color: #333;">×</button>
+            
+            <!-- Forgot Password Content -->
+            <div class="auth-form-container">
+                <h2 class="auth-forgot-title">Forgot Password</h2>
+                <p class="auth-forgot-description">
+                    Please enter your username or email address. You will receive a link to create a new password via email.
+                </p>
+                
+                <form id="authForgotPasswordForm">
+                    <!-- Email/Username Input -->
+                    <div class="auth-input-group">
+                        <input 
+                            type="text" 
+                            class="auth-input-field" 
+                            placeholder="Enter your username or email address"
+                            name="forgot-email"
+                            required
+                            style="padding-left: 15px;"
+                        >
+                    </div>
+                    
+                    <!-- Submit Button -->
+                    <button type="submit" class="auth-submit-btn">Submit</button>
+                </form>
+            </div>
+        </div>
+    </div>
+<!-- MAIN END -->
+
+
+
+
+
+
 
 
 <!--===== FOOTER =====-->
@@ -586,7 +787,5 @@ authForgotPasswordForm.addEventListener('submit', function(e) {
 
 
 
-
-  
 </body>
-</html>             
+</html>
